@@ -22,7 +22,7 @@ def predict():
             # Return the result as JSON but first we need to transform the
             # result so as to be serializable by jsonify()
             prediction = str(prediction[0])
-            return jsonify({"predict": prediction}), 200
+            return jsonify({"Wine quality prediction (rate out of 10)": prediction}), 200
     return jsonify({"msg": 
     'POST method with json'
     })
