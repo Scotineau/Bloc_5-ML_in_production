@@ -19,8 +19,8 @@ def predict():
             classifier = joblib.load("./models/model.joblib")
             # Predict
             prediction = classifier.predict(req["input"])
-            # Return the result as JSON but first we need to transform the
-            # result so as to be serializable by jsonify()
+            # Since prediction is a float and jsonify function can't handle
+            # floats we need to convert it to string
             prediction = str(prediction[0])
             return jsonify({"Wine quality prediction (rate out of 10)": prediction}), 200
     return jsonify({"msg": 
