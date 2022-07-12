@@ -1,7 +1,7 @@
-from flask import Flask, url_for, request, jsonify,render_template
+from flask import Flask, request, jsonify,render_template
 import joblib
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=("templates"))
 
 @app.route("/")
 def index():
@@ -19,12 +19,10 @@ def predict():
             classifier = joblib.load("./models/model.joblib")
             # Predict
             prediction = classifier.predict(req["input"])
-            # Since prediction is a float and jsonify function can't handle
-            # floats we need to convert it to string
+            # Return the result as JSON but jsonify read only str
             prediction = str(prediction[0])
             return jsonify({"predict": prediction}), 200
-    return jsonify({"msg": 
-    'POST method with json'
+    return jsonify({"msg": 'POST method with json'
     })
 
  
