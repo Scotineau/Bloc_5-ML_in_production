@@ -14,6 +14,7 @@
 * The API documentation is reachable through the following link: https://wine-quality-meter-app.herokuapp.com/
 
 * To get a prediction, as described above through the documentation, a terminal curl request is needed:
+
 $ curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}' https://wine-quality-meter-app.herokuapp.com/predict
 
 * And you should see : 
