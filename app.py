@@ -22,7 +22,7 @@ def predict():
             # Since prediction is a float and jsonify function can't handle
             # floats we need to convert it to string
             prediction = str(prediction[0])
-            return jsonify({"Wine quality prediction (rate out of 10)": prediction}), 200
+            return jsonify({"predict": prediction}), 200
     return jsonify({"msg": 
     'POST method with json'
     })
