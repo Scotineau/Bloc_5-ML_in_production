@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Wine-o-Meter-app</title>
+  <title>Wine-quality-prediction-app</title>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -14,7 +14,7 @@
 
 <body>
   <div>
-    <h1>Welcome to Wine-o-Meter application!</h1>
+    <h1>Welcome to Wine-o-Meter, the wine quality prediction application!</h1>
     <hr/>
     <h2>What is it?</h2>
     <p>Wine-o-Meter enables you to predict the quality score of your wine. The quality score is based on a predictive model built on a dataset of almost 6500 wines.</p> 
@@ -54,14 +54,14 @@
             You should request this endpoint using a POST method with a JSON content. Your JSON should contain the 11 values (float) of the features ranked as above.
           </p>
           <p>
-            Example: <code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}' https://wine-quality-meter-app.herokuapp.com/predict</code>
+            Example: <code>curl -i -H "Content-Type: application/json" -X POST -d '{"input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]}' https://wine-o-meter-quality-app.herokuapp.com/predict</code>
           </p>
           <p>
             It returns a JSON like so:
             <pre>
               <code>
                 {
-                  "Wine quality prediction (rate out of 10)":[6]
+                  "predict":[6]
                 }
               </code>
             </pre>
